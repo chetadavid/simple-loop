@@ -1,0 +1,39 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SimpleLoop {
+    uint public counter;
+
+    // Constructor initializes the counter
+    constructor() {
+        counter = 0;
+    }
+
+    // Function to increment the counter in a loop
+    function incrementCounter() public {
+        for (uint i = 0; i < 1000; i++) {
+            counter++;
+        }
+    }
+}
+
+
+
+
+contract ComplexLoop {
+    uint[] public dataArray;
+
+    // Constructor initializes the dataArray with 100 elements
+    constructor() {
+        for (uint i = 0; i < 100; i++) {
+            dataArray.push(i);
+        }
+    }
+
+    // Function to perform complex operation on the array
+    function processArray() public {
+        for (uint i = 0; i < 100; i++) {
+            dataArray[i] = dataArray[i] * 2; // Example complex operation: doubling each element
+        }
+    }
+}
